@@ -1,31 +1,25 @@
 #include <stdio.h>
-
 /**
-  * main - Prints the first 52 fibonacci numbers
-  *
-  * Return: Nothing!
-  */
+ * main - printing even numbers of fibonacci
+ *
+ * Return: void
+ */
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	unsigned int i, j, y, k, s;
 
-	while (i < 50)
+	i = 1;
+	j = 2;
+	y = 3;
+	k = 2;
+	for (s = 2; s <= 32; s++)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
-		}
-
-		++i;
+		if (y % 2 == 0)
+			k = k + y;
+		i = j;
+		j = y;
+		y = i + j;
 	}
-
-	printf("\n");
+	printf("%u\n", k);
 	return (0);
 }
