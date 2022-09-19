@@ -6,6 +6,7 @@
  * a: The array of integers.
  * n: Is the number of elements to be printed.
  */
+
 void print_array(int *a, int n)
 {
 	int index;
