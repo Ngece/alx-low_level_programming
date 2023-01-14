@@ -1,7 +1,3 @@
-/*
- * File: 100-sorted_hash_table.c
- * Testing out if commenting like this will work
- */
 
 #include "hash_tables.h"
 
