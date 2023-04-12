@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-// Defines the linear seach function
 int linear_search(int *array, size_t size, int value) {
-	for (int i = 0; i < size - 1; i++) {
-		//print the elements checked and return i when found
-		printf("Value checked array[%d] = [%d]\n", i, array[i]);
-		if (array[i] == value) {
-			return 1;
-		}
-	}
-	return -1;
+    // Check if the array is NULL
+    if (array == NULL) {
+        return -1; // return -1 if array is NULL
+    }
+    // Loop through each element of the array
+    for (size_t i = 0; i < size; i++) {
+        // If the current element of the array matches the target value, return its index
+        if (array[i] == value) {
+            return i; // return index of first occurrence of value
+        }
+    }
+    // If the target value is not found in the array, return -1
+    return -1; // return -1 if value not found in array
 }
 
