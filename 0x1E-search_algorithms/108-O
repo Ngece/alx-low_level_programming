@@ -1,1 +1,1 @@
-qrt(n) * log n)
+O(sqrt(n) * log n)
